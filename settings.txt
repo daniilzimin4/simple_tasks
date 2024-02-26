@@ -1,0 +1,9 @@
+int
+float
+multiply 10
+logarithm 5
+power 3
+multiply 2
+multiply 10
+logarithm 2
+average

@@ -1,0 +1,12 @@
+error: 1 while executed
+4.43601
+4.63829
+4.71808
+4.76067
+4.77472
+4.63423
+4.56064
+4.54287
+error: 1 while executed
+error: 1 while executed
+4.41136
