@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+package employee;
+
+message Employee {
+    int32 id = 1;
+    string name = 2;
+    string position = 3;
+    int32 manager_id = 4;
+}
+
+service EmployeeService {
+    rpc AddEmployee(Employee) returns (Employee);
+    rpc GetAllListEmployees(google.protobuf.Empty) returns (stream Employee);
+    rpc DeleteEmployeeById(Employee) returns (google.protobuf.Empty);
+    rpc SetEmployeePosition(PositionRequest) returns (Employee);
+    rpc SetEmployeeManagerId(ManagerIdRequest) returns (Employee);
+    rpc GetEmployeeById(Employee) returns (Employee);
+    // Добавьте остальные методы сервиса по мере необходимости
+}
+
+message PositionRequest{
+    int32 employee_id = 1;
+    string new_position = 2;
+}
+
+message ManagerIdRequest{
+    int32 employee_id = 1;
+    int32 new_manager_id = 2;
+}
